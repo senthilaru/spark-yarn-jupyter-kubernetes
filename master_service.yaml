@@ -1,0 +1,17 @@
+kind : Service
+apiVersion: v1
+metadata :
+  name : spark-master-service
+spec :
+  selector:
+    app : spark-master
+  ports:
+    - port : 7077
+      targetPort : 7077
+      name : sparkmaster
+    - port : 8080
+      targetPort : 8080
+      name : sparkui
+    - port : 8888
+      targetPort : 8888
+      name : jupyter

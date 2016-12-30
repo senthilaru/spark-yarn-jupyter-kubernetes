@@ -1,0 +1,21 @@
+kind: Deployment
+apiVersion: extensions/v1beta1
+metadata:
+  name: worker
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: worker
+    spec:
+      containers:
+        - name: worker
+          image: spsenthil/spark:2.5
+          env:
+            - name: ENVIRONMENT
+              value: "DEV"
+          args:
+            - sh
+            - sp-worker.sh
+            - spark-master-service       

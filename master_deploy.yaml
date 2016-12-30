@@ -1,0 +1,20 @@
+kind: Deployment
+apiVersion: extensions/v1beta1
+metadata:
+  name: spark-master
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: spark-master
+    spec:
+      containers:
+        - name: spark-master
+          image: spsenthil/spark:2.5
+          env:
+            - name: ENVIRONMENT
+              value: "DEV"
+          args:
+            - sh
+            - sp-master.sh

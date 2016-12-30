@@ -1,0 +1,22 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: spark-lb-service
+spec:
+  ports:
+    - name: spark
+      port: 8080
+      targetPort: 8080
+    - name: yarn
+      port: 8088
+      targetPort: 8088
+    - name: https
+      port: 443
+      targetPort: 443
+    - name: jupyter
+      port: 80
+      targetPort: 8888
+  selector:
+    app: spark-master
+  type: LoadBalancer
+  loadBalancerIP: 146.148.111.138
