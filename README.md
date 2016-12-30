@@ -23,4 +23,7 @@ Prerequiste:
      
   4. Cluster size will be 2 (1 - Master node and 1 Worker node). If you want to increase the cluster size, change it in the file (worker_deploy.yaml) spec:replicas: 1
   
+  5. Autoscale spark workers by running the below command
+  
+      `kubectl autoscale deployment worker --cpu-percent=75 --min=1 --max=10`
   
