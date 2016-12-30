@@ -13,7 +13,7 @@ Prerequiste:
   2. Create an external IP(EXTERNAL_IP) in Google Cloud (https://console.cloud.google.com/networking/addresses/list) and place the IP in the file (spark_lb_service.yaml) by replacing the IP(146.148.111.138) exists in the last line.
     
        `kubectl deploy *.yaml`
-  3. Wait for sometime, till the GC creates teh cluster. You can check it out using below URL.
+  3. Wait for sometime, till the GC creates the spark cluster. You can check it out using below URL.
   
       `Jupyter Notebook - http://EXTERNAL_IP:8888`
       
