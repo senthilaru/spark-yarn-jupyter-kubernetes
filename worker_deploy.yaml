@@ -11,7 +11,7 @@ spec:
     spec:
       containers:
         - name: worker
-          image: spsenthil/spark:2.5
+          image: spsenthil/spark:2.7
           env:
             - name: ENVIRONMENT
               value: "DEV"
