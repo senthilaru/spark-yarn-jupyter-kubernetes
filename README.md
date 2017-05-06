@@ -27,4 +27,7 @@ Prerequiste:
   5. Autoscale spark workers by running the below command
   
       `kubectl autoscale deployment worker --cpu-percent=75 --min=1 --max=10`
+      
+  6. Finally to delete all
+        `kubectl delete -f  spark-yarn-jupyter-kubernetes/`
   
